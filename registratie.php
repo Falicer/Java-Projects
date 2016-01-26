@@ -26,14 +26,15 @@
         
 <?php
 // define variables and set to empty values
-$name = $email = $gender = $comment = $website = "";
+$username = $email = $adres = $postcode = $pwd1 = $pwd2 = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = test_input($_POST["username"]);
   $email = test_input($_POST["email"]);
   $adres = test_input($_POST["adres"]);
   $postcode = test_input($_POST["postcode"]);
-  $pwd1 = test_input($_POST["gender"]);
+  $pwd1 = test_input($_POST["pwd1"]);
+  $pwd2 = test_input($_POST["pwd2"]);
 }
 
 function test_input($data) {

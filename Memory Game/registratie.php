@@ -7,7 +7,7 @@
          <script src="validationform.js"></script> 
     </head>
     <body>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return checkForm(this);">
                 Naam: <input type="text"
                 name="username"  /><br />
                 Adres:<input type="text"

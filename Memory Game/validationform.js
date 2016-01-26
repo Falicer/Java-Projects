@@ -46,7 +46,25 @@
       form.pwd1.focus();
       return false;
     }
-
-    alert("You entered a valid password: ");
-    return true;
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.email.value))  
+    {  
+    return (true)  
+      }else{  
+        alert("You have entered an invalid email address!")  
+        return (false)    
+      }
+      var rege = /^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i;
+      if(!rege.match(/^[1-9][0-9]{3} ?(?!sa |sd|ss)[a-z]{2}$/i)) {
+        return false;
+      } else {
+        return true;
+      }
+       if (VerifyPostcode_check(document.registratie.email.value)) {
+        alert('De opgegeven postcode is juist...')
+       } else {
+            alert('De opgegeven postcode is NIET juist!')
+           document.registratie .email.focus();
+       }
+}
+      
   }

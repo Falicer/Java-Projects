@@ -1,0 +1,10 @@
+C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\bin\Debug\ROCVa App memory game.exe.config
+C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\bin\Debug\ROCVa App memory game.exe
+C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\bin\Debug\ROCVa App memory game.pdb
+C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\obj\Debug\ROCVa App memory game.csprojResolveAssemblyReference.cache
+C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\obj\Debug\ROCVa_App_memory_game.memorygameStart.resources
+C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\obj\Debug\ROCVa_App_memory_game.Properties.Resources.resources
+C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\obj\Debug\ROCVa App memory game.csproj.GenerateResource.Cache
+C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\obj\Debug\ROCVa App memory game.exe
+C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\obj\Debug\ROCVa App memory game.pdb
+C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\obj\Debug\ROCVa_App_memory_game.Level1.resources

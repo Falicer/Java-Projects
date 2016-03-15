@@ -8,3 +8,4 @@ C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memor
 C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\obj\Debug\ROCVa App memory game.exe
 C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\obj\Debug\ROCVa App memory game.pdb
 C:\Users\Troy\Documents\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\obj\Debug\ROCVa_App_memory_game.Level1.resources
+C:\Users\Raekwon\Desktop\school\2de jaar AO\C# & Java\Java-Projects\Memory Game\Memory Game c#\ROCVa App memory game\ROCVa App memory game\bin\Debug\ROCVa App memory game.exe.config

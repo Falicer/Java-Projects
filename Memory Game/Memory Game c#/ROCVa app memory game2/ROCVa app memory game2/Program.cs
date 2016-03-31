@@ -16,7 +16,7 @@ namespace ROCVa_app_memory_game2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Level1());
+            Application.Run(new Start_Menu());
         }
     }
 }

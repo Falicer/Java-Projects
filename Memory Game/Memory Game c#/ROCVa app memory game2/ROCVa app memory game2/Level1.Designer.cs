@@ -1,6 +1,6 @@
 ﻿namespace ROCVa_app_memory_game2
 {
-    partial class Level1
+    public partial class Level1
     {
         /// <summary>
         /// Required designer variable.
@@ -58,6 +58,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.Opnieuw = new System.Windows.Forms.Button();
             this.cardsHolder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DubCard9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card9)).BeginInit();
@@ -111,225 +113,274 @@
             this.cardsHolder.Controls.Add(this.DubCard2);
             this.cardsHolder.Controls.Add(this.DubCard1);
             this.cardsHolder.Controls.Add(this.Card1);
-            this.cardsHolder.Location = new System.Drawing.Point(6, 40);
+            this.cardsHolder.Location = new System.Drawing.Point(8, 49);
+            this.cardsHolder.Margin = new System.Windows.Forms.Padding(4);
             this.cardsHolder.Name = "cardsHolder";
-            this.cardsHolder.Size = new System.Drawing.Size(613, 439);
+            this.cardsHolder.Size = new System.Drawing.Size(817, 540);
             this.cardsHolder.TabIndex = 0;
             // 
             // DubCard9
             // 
-            this.DubCard9.Location = new System.Drawing.Point(511, 215);
+            this.DubCard9.Location = new System.Drawing.Point(681, 265);
+            this.DubCard9.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard9.Name = "DubCard9";
-            this.DubCard9.Size = new System.Drawing.Size(100, 100);
+            this.DubCard9.Size = new System.Drawing.Size(133, 123);
             this.DubCard9.TabIndex = 24;
             this.DubCard9.TabStop = false;
+            this.DubCard9.Tag = "9";
             this.DubCard9.Click += new System.EventHandler(this.DubCard9_Click);
             // 
             // Card9
             // 
-            this.Card9.Location = new System.Drawing.Point(410, 215);
+            this.Card9.Location = new System.Drawing.Point(547, 265);
+            this.Card9.Margin = new System.Windows.Forms.Padding(4);
             this.Card9.Name = "Card9";
-            this.Card9.Size = new System.Drawing.Size(100, 100);
+            this.Card9.Size = new System.Drawing.Size(133, 123);
             this.Card9.TabIndex = 23;
             this.Card9.TabStop = false;
+            this.Card9.Tag = "9";
             this.Card9.Click += new System.EventHandler(this.Card9_Click);
             // 
             // Card8
             // 
-            this.Card8.Location = new System.Drawing.Point(208, 215);
+            this.Card8.Location = new System.Drawing.Point(277, 265);
+            this.Card8.Margin = new System.Windows.Forms.Padding(4);
             this.Card8.Name = "Card8";
-            this.Card8.Size = new System.Drawing.Size(100, 100);
+            this.Card8.Size = new System.Drawing.Size(133, 123);
             this.Card8.TabIndex = 22;
             this.Card8.TabStop = false;
+            this.Card8.Tag = "8";
             this.Card8.Click += new System.EventHandler(this.Card8_Click);
             // 
             // DubCard8
             // 
-            this.DubCard8.Location = new System.Drawing.Point(309, 215);
+            this.DubCard8.Location = new System.Drawing.Point(412, 265);
+            this.DubCard8.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard8.Name = "DubCard8";
-            this.DubCard8.Size = new System.Drawing.Size(100, 100);
+            this.DubCard8.Size = new System.Drawing.Size(133, 123);
             this.DubCard8.TabIndex = 21;
             this.DubCard8.TabStop = false;
+            this.DubCard8.Tag = "8";
             this.DubCard8.Click += new System.EventHandler(this.DubCard8_Click);
             // 
             // DubCard7
             // 
-            this.DubCard7.Location = new System.Drawing.Point(107, 215);
+            this.DubCard7.Location = new System.Drawing.Point(143, 265);
+            this.DubCard7.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard7.Name = "DubCard7";
-            this.DubCard7.Size = new System.Drawing.Size(100, 100);
+            this.DubCard7.Size = new System.Drawing.Size(133, 123);
             this.DubCard7.TabIndex = 20;
             this.DubCard7.TabStop = false;
+            this.DubCard7.Tag = "7";
             this.DubCard7.Click += new System.EventHandler(this.DubCard7_Click);
             // 
             // Card7
             // 
-            this.Card7.Location = new System.Drawing.Point(6, 215);
+            this.Card7.Location = new System.Drawing.Point(8, 265);
+            this.Card7.Margin = new System.Windows.Forms.Padding(4);
             this.Card7.Name = "Card7";
-            this.Card7.Size = new System.Drawing.Size(100, 100);
+            this.Card7.Size = new System.Drawing.Size(133, 123);
             this.Card7.TabIndex = 19;
             this.Card7.TabStop = false;
+            this.Card7.Tag = "7";
             this.Card7.Click += new System.EventHandler(this.Card7_Click);
             // 
             // DubCard12
             // 
-            this.DubCard12.Location = new System.Drawing.Point(511, 321);
+            this.DubCard12.Location = new System.Drawing.Point(681, 395);
+            this.DubCard12.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard12.Name = "DubCard12";
-            this.DubCard12.Size = new System.Drawing.Size(100, 100);
+            this.DubCard12.Size = new System.Drawing.Size(133, 123);
             this.DubCard12.TabIndex = 18;
             this.DubCard12.TabStop = false;
+            this.DubCard12.Tag = "12";
             this.DubCard12.Click += new System.EventHandler(this.DubCard12_Click);
             // 
             // Card12
             // 
-            this.Card12.Location = new System.Drawing.Point(410, 321);
+            this.Card12.Location = new System.Drawing.Point(547, 395);
+            this.Card12.Margin = new System.Windows.Forms.Padding(4);
             this.Card12.Name = "Card12";
-            this.Card12.Size = new System.Drawing.Size(100, 100);
+            this.Card12.Size = new System.Drawing.Size(133, 123);
             this.Card12.TabIndex = 17;
             this.Card12.TabStop = false;
+            this.Card12.Tag = "12";
             this.Card12.Click += new System.EventHandler(this.Card12_Click);
             // 
             // Card11
             // 
-            this.Card11.Location = new System.Drawing.Point(208, 321);
+            this.Card11.Location = new System.Drawing.Point(277, 395);
+            this.Card11.Margin = new System.Windows.Forms.Padding(4);
             this.Card11.Name = "Card11";
-            this.Card11.Size = new System.Drawing.Size(100, 100);
+            this.Card11.Size = new System.Drawing.Size(133, 123);
             this.Card11.TabIndex = 16;
             this.Card11.TabStop = false;
+            this.Card11.Tag = "11";
             this.Card11.Click += new System.EventHandler(this.Card11_Click);
             // 
             // DubCard11
             // 
-            this.DubCard11.Location = new System.Drawing.Point(309, 321);
+            this.DubCard11.Location = new System.Drawing.Point(412, 395);
+            this.DubCard11.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard11.Name = "DubCard11";
-            this.DubCard11.Size = new System.Drawing.Size(100, 100);
+            this.DubCard11.Size = new System.Drawing.Size(133, 123);
             this.DubCard11.TabIndex = 15;
             this.DubCard11.TabStop = false;
+            this.DubCard11.Tag = "11";
             this.DubCard11.Click += new System.EventHandler(this.DubCard11_Click);
             // 
             // DubCard10
             // 
-            this.DubCard10.Location = new System.Drawing.Point(107, 321);
+            this.DubCard10.Location = new System.Drawing.Point(143, 395);
+            this.DubCard10.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard10.Name = "DubCard10";
-            this.DubCard10.Size = new System.Drawing.Size(100, 100);
+            this.DubCard10.Size = new System.Drawing.Size(133, 123);
             this.DubCard10.TabIndex = 14;
             this.DubCard10.TabStop = false;
+            this.DubCard10.Tag = "10";
             this.DubCard10.Click += new System.EventHandler(this.DubCard10_Click);
             // 
             // Card10
             // 
-            this.Card10.Location = new System.Drawing.Point(6, 321);
+            this.Card10.Location = new System.Drawing.Point(8, 395);
+            this.Card10.Margin = new System.Windows.Forms.Padding(4);
             this.Card10.Name = "Card10";
-            this.Card10.Size = new System.Drawing.Size(100, 100);
+            this.Card10.Size = new System.Drawing.Size(133, 123);
             this.Card10.TabIndex = 13;
             this.Card10.TabStop = false;
+            this.Card10.Tag = "10";
             this.Card10.Click += new System.EventHandler(this.Card10_Click);
             // 
             // DubCard6
             // 
-            this.DubCard6.Location = new System.Drawing.Point(511, 109);
+            this.DubCard6.Location = new System.Drawing.Point(681, 134);
+            this.DubCard6.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard6.Name = "DubCard6";
-            this.DubCard6.Size = new System.Drawing.Size(100, 100);
+            this.DubCard6.Size = new System.Drawing.Size(133, 123);
             this.DubCard6.TabIndex = 12;
             this.DubCard6.TabStop = false;
+            this.DubCard6.Tag = "6";
             this.DubCard6.Click += new System.EventHandler(this.DubCard6_Click);
             // 
             // Card6
             // 
-            this.Card6.Location = new System.Drawing.Point(410, 109);
+            this.Card6.Location = new System.Drawing.Point(547, 134);
+            this.Card6.Margin = new System.Windows.Forms.Padding(4);
             this.Card6.Name = "Card6";
-            this.Card6.Size = new System.Drawing.Size(100, 100);
+            this.Card6.Size = new System.Drawing.Size(133, 123);
             this.Card6.TabIndex = 11;
             this.Card6.TabStop = false;
+            this.Card6.Tag = "6";
             this.Card6.Click += new System.EventHandler(this.Card6_Click);
             // 
             // Card5
             // 
-            this.Card5.Location = new System.Drawing.Point(208, 109);
+            this.Card5.Location = new System.Drawing.Point(277, 134);
+            this.Card5.Margin = new System.Windows.Forms.Padding(4);
             this.Card5.Name = "Card5";
-            this.Card5.Size = new System.Drawing.Size(100, 100);
+            this.Card5.Size = new System.Drawing.Size(133, 123);
             this.Card5.TabIndex = 10;
             this.Card5.TabStop = false;
+            this.Card5.Tag = "5";
             this.Card5.Click += new System.EventHandler(this.Card5_Click);
             // 
             // DubCard5
             // 
-            this.DubCard5.Location = new System.Drawing.Point(309, 109);
+            this.DubCard5.Location = new System.Drawing.Point(412, 134);
+            this.DubCard5.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard5.Name = "DubCard5";
-            this.DubCard5.Size = new System.Drawing.Size(100, 100);
+            this.DubCard5.Size = new System.Drawing.Size(133, 123);
             this.DubCard5.TabIndex = 9;
             this.DubCard5.TabStop = false;
+            this.DubCard5.Tag = "5";
             this.DubCard5.Click += new System.EventHandler(this.DubCard5_Click);
             // 
             // DubCard4
             // 
-            this.DubCard4.Location = new System.Drawing.Point(107, 109);
+            this.DubCard4.Location = new System.Drawing.Point(143, 134);
+            this.DubCard4.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard4.Name = "DubCard4";
-            this.DubCard4.Size = new System.Drawing.Size(100, 100);
+            this.DubCard4.Size = new System.Drawing.Size(133, 123);
             this.DubCard4.TabIndex = 8;
             this.DubCard4.TabStop = false;
+            this.DubCard4.Tag = "4";
             this.DubCard4.Click += new System.EventHandler(this.DubCard4_Click);
             // 
             // Card4
             // 
-            this.Card4.Location = new System.Drawing.Point(6, 109);
+            this.Card4.Location = new System.Drawing.Point(8, 134);
+            this.Card4.Margin = new System.Windows.Forms.Padding(4);
             this.Card4.Name = "Card4";
-            this.Card4.Size = new System.Drawing.Size(100, 100);
+            this.Card4.Size = new System.Drawing.Size(133, 123);
             this.Card4.TabIndex = 7;
             this.Card4.TabStop = false;
+            this.Card4.Tag = "4";
             this.Card4.Click += new System.EventHandler(this.Card4_Click);
             // 
             // DubCard3
             // 
-            this.DubCard3.Location = new System.Drawing.Point(511, 3);
+            this.DubCard3.Location = new System.Drawing.Point(681, 4);
+            this.DubCard3.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard3.Name = "DubCard3";
-            this.DubCard3.Size = new System.Drawing.Size(100, 100);
+            this.DubCard3.Size = new System.Drawing.Size(133, 123);
             this.DubCard3.TabIndex = 6;
             this.DubCard3.TabStop = false;
+            this.DubCard3.Tag = "3";
             this.DubCard3.Click += new System.EventHandler(this.DubCard3_Click);
             // 
             // Card3
             // 
-            this.Card3.Location = new System.Drawing.Point(410, 3);
+            this.Card3.Location = new System.Drawing.Point(547, 4);
+            this.Card3.Margin = new System.Windows.Forms.Padding(4);
             this.Card3.Name = "Card3";
-            this.Card3.Size = new System.Drawing.Size(100, 100);
+            this.Card3.Size = new System.Drawing.Size(133, 123);
             this.Card3.TabIndex = 5;
             this.Card3.TabStop = false;
+            this.Card3.Tag = "3";
             this.Card3.Click += new System.EventHandler(this.Card3_Click);
             // 
             // Card2
             // 
-            this.Card2.Location = new System.Drawing.Point(208, 3);
+            this.Card2.Location = new System.Drawing.Point(277, 4);
+            this.Card2.Margin = new System.Windows.Forms.Padding(4);
             this.Card2.Name = "Card2";
-            this.Card2.Size = new System.Drawing.Size(100, 100);
+            this.Card2.Size = new System.Drawing.Size(133, 123);
             this.Card2.TabIndex = 4;
             this.Card2.TabStop = false;
+            this.Card2.Tag = "2";
             this.Card2.Click += new System.EventHandler(this.Card2_Click);
             // 
             // DubCard2
             // 
-            this.DubCard2.Location = new System.Drawing.Point(309, 3);
+            this.DubCard2.Location = new System.Drawing.Point(412, 4);
+            this.DubCard2.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard2.Name = "DubCard2";
-            this.DubCard2.Size = new System.Drawing.Size(100, 100);
+            this.DubCard2.Size = new System.Drawing.Size(133, 123);
             this.DubCard2.TabIndex = 3;
             this.DubCard2.TabStop = false;
+            this.DubCard2.Tag = "2";
             this.DubCard2.Click += new System.EventHandler(this.DubCard2_Click);
             // 
             // DubCard1
             // 
-            this.DubCard1.Location = new System.Drawing.Point(107, 3);
+            this.DubCard1.Location = new System.Drawing.Point(143, 4);
+            this.DubCard1.Margin = new System.Windows.Forms.Padding(4);
             this.DubCard1.Name = "DubCard1";
-            this.DubCard1.Size = new System.Drawing.Size(100, 100);
+            this.DubCard1.Size = new System.Drawing.Size(133, 123);
             this.DubCard1.TabIndex = 2;
             this.DubCard1.TabStop = false;
+            this.DubCard1.Tag = "1";
             this.DubCard1.Click += new System.EventHandler(this.DubCard1_Click);
             // 
             // Card1
             // 
-            this.Card1.Location = new System.Drawing.Point(6, 3);
+            this.Card1.Location = new System.Drawing.Point(5, 4);
+            this.Card1.Margin = new System.Windows.Forms.Padding(4);
             this.Card1.Name = "Card1";
-            this.Card1.Size = new System.Drawing.Size(100, 100);
+            this.Card1.Size = new System.Drawing.Size(133, 123);
             this.Card1.TabIndex = 1;
             this.Card1.TabStop = false;
+            this.Card1.Tag = "1";
             this.Card1.Click += new System.EventHandler(this.Card1_Click);
             // 
             // timer1
@@ -341,9 +392,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 9);
+            this.label1.Location = new System.Drawing.Point(31, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 22);
+            this.label1.Size = new System.Drawing.Size(78, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tijd:";
             // 
@@ -351,26 +403,46 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(91, 9);
+            this.label2.Location = new System.Drawing.Point(121, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 22);
+            this.label2.Size = new System.Drawing.Size(0, 27);
             this.label2.TabIndex = 2;
-            this.label2.Text = "2";
             // 
             // timer2
             // 
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // timer3
+            // 
+            this.timer3.Interval = 500;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // Opnieuw
+            // 
+            this.Opnieuw.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Opnieuw.Image = global::ROCVa_app_memory_game2.Properties.Resources.Spongebob_Squarepants_Cartoons_Download;
+            this.Opnieuw.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Opnieuw.Location = new System.Drawing.Point(543, 5);
+            this.Opnieuw.Name = "Opnieuw";
+            this.Opnieuw.Size = new System.Drawing.Size(279, 39);
+            this.Opnieuw.TabIndex = 3;
+            this.Opnieuw.Text = "Speel Opnieuw";
+            this.Opnieuw.UseVisualStyleBackColor = true;
+            this.Opnieuw.Click += new System.EventHandler(this.Opnieuw_Click);
+            // 
             // Level1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 491);
+            this.ClientSize = new System.Drawing.Size(836, 604);
+            this.Controls.Add(this.Opnieuw);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cardsHolder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Level1";
@@ -438,6 +510,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Button Opnieuw;
     }
 }
 

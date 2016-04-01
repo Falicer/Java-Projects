@@ -29,7 +29,11 @@ namespace ROCVa_app_memory_game2
 
         private void Start_Knop_Click(object sender, EventArgs e)
         {
-            
+            Level1 form = new Level1();
+            form.Show();
+            this.Hide();
+            //this.Close();
+
         }
     }
 }

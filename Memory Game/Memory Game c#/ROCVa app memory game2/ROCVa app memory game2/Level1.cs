@@ -29,7 +29,7 @@ namespace ROCVa_app_memory_game2
         
         public Level1()
         {
-            BringToFront(Start_Menu);
+            
             InitializeComponent();
         }
 

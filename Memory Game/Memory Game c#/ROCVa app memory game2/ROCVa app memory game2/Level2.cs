@@ -35,7 +35,8 @@ namespace ROCVa_app_memory_game2
 
         private void Level2_Load(object sender, EventArgs e)
         {
-            label2.Text = "2";
+            int timer4 = 120 - Level * 20;
+            label2.Text = Convert.ToString(timer4);
             timer1.Start();
             timer2.Start();
             #region afbeeldingen
@@ -67,7 +68,7 @@ namespace ROCVa_app_memory_game2
             
             
         }
-
+        #region Level Timer
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -75,42 +76,48 @@ namespace ROCVa_app_memory_game2
             {
                 picture.Cursor = Cursors.Hand;
                 picture.Image = Properties.Resources.Achtergrond;
-                points.Add(picture.Location);
-            }
-            foreach(PictureBox picture in cardsHolder.Controls)
-            {
-                int next = Location.Next(points.Count);
-                Point p = points[next];
-                picture.Location = p;  //Geeft plaatje de locatie van Next Random
-                points.Remove(p); //Zelfde locatie wordt niet meer gebruikt
+                picture.Enabled = true;
             }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             int timer = Convert.ToInt32(label2.Text);
-            timer = timer-1;
-            label2.Text = Convert.ToString(timer);
-            if(timer == 0)
-            {
-                timer2.Stop();
-                timer4.Start();
-            }
-        }
-        #region Level Timer
-
-        private void timer4_Tick(object sender, EventArgs e)
-        {
-            int timer = 0;
-            int timer4 = 120 - Level * 20;
-
-            timer = timer4 - timer;
-
+            timer = timer - 1;
             label2.Text = Convert.ToString(timer);
             if (timer == 0)
             {
-                
+                timer2.Stop();
+                if (MessageBox.Show("De tijd is om! wilt u het opnieuw proberen?", "Tijd is om!", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button1) == DialogResult.No)
+                {
+                    Start_Menu form = new Start_Menu();
+                    form.Show();
+                    this.Hide();
+                    //Application.Exit(); // or this.Close();
+                }
+                else
+                {
+                    Level1 form = new Level1();
+                    form.Show();
+                    this.Hide();
+                    // timer4.Start();
+                }
             }
+        }
+
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            //int timer = 100;
+            //int timer4 = 120 - Level * 20;
+
+            // timer = timer-1;
+
+            //label2.Text = Convert.ToString(timer);
+            //if (timer == 0)
+            //{
+
+            //}
         }
         #endregion
        
@@ -809,11 +816,45 @@ namespace ROCVa_app_memory_game2
 
         #endregion
 
+        #region Opnieuw Knop
+
         private void Opnieuw_Click(object sender, EventArgs e)
         {
             CardEnable();
             Level2_Load(sender, e);
 
         }
+        #endregion
+
+        #region Level Omhoog Check
+
+        public void LevelUpCheck()
+        {
+            if (Card1.Enabled == false && DubCard1.Enabled == false &&
+                Card2.Enabled == false && DubCard2.Enabled == false &&
+                Card3.Enabled == false && DubCard3.Enabled == false &&
+                Card4.Enabled == false && DubCard4.Enabled == false &&
+                Card5.Enabled == false && DubCard5.Enabled == false &&
+                Card6.Enabled == false && DubCard6.Enabled == false &&
+                Card7.Enabled == false && DubCard7.Enabled == false &&
+                Card8.Enabled == false && DubCard8.Enabled == false &&
+                Card9.Enabled == false && DubCard9.Enabled == false &&
+                Card10.Enabled == false && DubCard10.Enabled == false &&
+                Card11.Enabled == false && DubCard11.Enabled == false &&
+                Card12.Enabled == false && DubCard12.Enabled == false)
+            {
+                timer2.Stop();
+                System.Windows.Forms.MessageBox.Show("Goed Gedaan het level is voltooid, je gaat nu naar het volgende level!");
+                Level2 form = new Level2();
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+
+            }
+        }
+
+        #endregion
     }
 }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace ROCVa_app_memory_game2
 {
 
-    public partial class Level1 : Form
+    public partial class Level3 : Form
     {
         //variables
         Random Location = new Random();
@@ -20,33 +20,21 @@ namespace ROCVa_app_memory_game2
         //List<int> Y = new List<int>();
         List<Point> points = new List<Point>(); // Lijst voor de kaarten
         bool again = false; // speel nog een keer?
-        int Level = 1;
+        int Level = 2;
         PictureBox PendingImage1; //Slaat eerste geflipte kaart op
         PictureBox PendingImage2; //Slaat tweede geflipte kaart op
 
-        //List<int> IDS = new List<int>();
-        //List<PictureBox> pictureboxes = new List<PictureBox>();
+        List<int> IDS = new List<int>();
+        List<PictureBox> pictureboxes = new List<PictureBox>();
         
-        public Level1()
+        public Level3()
         {
             
             InitializeComponent();
         }
 
-        private void Level1_Load(object sender, EventArgs e)
+        private void Level2_Load(object sender, EventArgs e)
         {
-            foreach (PictureBox picture in cardsHolder.Controls)
-            {
-                picture.Enabled = false;
-                points.Add(picture.Location);
-            }
-            foreach (PictureBox picture in cardsHolder.Controls)
-            {
-                int next = Location.Next(points.Count);
-                Point p = points[next];
-                picture.Location = p;  //Geeft plaatje de locatie van Next Random
-                points.Remove(p); //Zelfde locatie wordt niet meer gebruikt
-            }
             label2.Text = "2";
             timer1.Start();
             timer2.Start();
@@ -87,7 +75,14 @@ namespace ROCVa_app_memory_game2
             {
                 picture.Cursor = Cursors.Hand;
                 picture.Image = Properties.Resources.Achtergrond;
-                picture.Enabled = true;
+                points.Add(picture.Location);
+            }
+            foreach(PictureBox picture in cardsHolder.Controls)
+            {
+                int next = Location.Next(points.Count);
+                Point p = points[next];
+                picture.Location = p;  //Geeft plaatje de locatie van Next Random
+                points.Remove(p); //Zelfde locatie wordt niet meer gebruikt
             }
         }
 
@@ -106,10 +101,10 @@ namespace ROCVa_app_memory_game2
 
         private void timer4_Tick(object sender, EventArgs e)
         {
-            int timer = 100;
-            //int timer4 = 120 - Level * 20;
+            int timer = 0;
+            int timer4 = 120 - Level * 20;
 
-            timer = timer-1;
+            timer = timer4 - timer;
 
             label2.Text = Convert.ToString(timer);
             if (timer == 0)
@@ -817,7 +812,7 @@ namespace ROCVa_app_memory_game2
         private void Opnieuw_Click(object sender, EventArgs e)
         {
             CardEnable();
-            Level1_Load(sender, e);
+            Level2_Load(sender, e);
 
         }
     }

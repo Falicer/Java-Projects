@@ -1,6 +1,6 @@
 ﻿namespace ROCVa_app_memory_game2
 {
-    public partial class Level1
+    public partial class Level3
     {
         /// <summary>
         /// Required designer variable.
@@ -409,10 +409,9 @@
             // 
             // timer4
             // 
-            this.timer4.Interval = 1000;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
-            // Level1
+            // Level2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -424,10 +423,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Level1";
+            this.Name = "Level2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Level1";
-            this.Load += new System.EventHandler(this.Level1_Load);
+            this.Text = "Level2";
+            this.Load += new System.EventHandler(this.Level2_Load);
             this.cardsHolder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DubCard9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card9)).EndInit();

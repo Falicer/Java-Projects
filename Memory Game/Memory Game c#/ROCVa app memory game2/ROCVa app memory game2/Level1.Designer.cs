@@ -60,6 +60,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.Opnieuw = new System.Windows.Forms.Button();
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.cardsHolder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DubCard9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card9)).BeginInit();
@@ -432,6 +433,10 @@
             this.Opnieuw.UseVisualStyleBackColor = true;
             this.Opnieuw.Click += new System.EventHandler(this.Opnieuw_Click);
             // 
+            // timer4
+            // 
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+            // 
             // Level1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -512,6 +517,7 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Button Opnieuw;
+        private System.Windows.Forms.Timer timer4;
     }
 }
 

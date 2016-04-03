@@ -20,7 +20,7 @@ namespace ROCVa_app_memory_game2
         //List<int> Y = new List<int>();
         List<Point> points = new List<Point>(); // Lijst voor de kaarten
         bool again = false; // speel nog een keer?
-
+        int Level = 1;
         PictureBox PendingImage1; //Slaat eerste geflipte kaart op
         PictureBox PendingImage2; //Slaat tweede geflipte kaart op
 
@@ -64,6 +64,8 @@ namespace ROCVa_app_memory_game2
             Card12.Image = Properties.Resources.Kaart12;
             DubCard12.Image = Properties.Resources.Kaart12;
             #endregion
+            
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -92,8 +94,26 @@ namespace ROCVa_app_memory_game2
             if(timer == 0)
             {
                 timer2.Stop();
+                timer4.Start();
             }
         }
+        #region Level Timer
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            int timer = 0;
+            int timer4 = 120 - Level * 20;
+
+            timer = timer4 - timer;
+
+            label2.Text = Convert.ToString(timer);
+            if (timer == 0)
+            {
+                
+            }
+        }
+        #endregion
+       
         //Verander de value van de kaarten op klick event
         #region Kaarten
         private void Card1_Click(object sender, EventArgs e)
@@ -746,7 +766,7 @@ namespace ROCVa_app_memory_game2
         }
         #endregion
 
-        #region Kaart Timer
+        #region Kaart Show Timer
         private void timer3_Tick(object sender, EventArgs e)
         {
             timer3.Stop();
@@ -757,9 +777,43 @@ namespace ROCVa_app_memory_game2
         }
         #endregion
 
+        #region Kaart Enable
+
+        private void CardEnable()
+        {
+            Card1.Enabled = true;
+            Card2.Enabled = true;
+            Card3.Enabled = true;
+            Card4.Enabled = true;
+            Card5.Enabled = true;
+            Card6.Enabled = true;
+            Card7.Enabled = true;
+            Card8.Enabled = true;
+            Card9.Enabled = true;
+            Card10.Enabled = true;
+            Card11.Enabled = true;
+            Card12.Enabled = true;
+            DubCard1.Enabled = true;
+            DubCard2.Enabled = true;
+            DubCard3.Enabled = true;
+            DubCard4.Enabled = true;
+            DubCard5.Enabled = true;
+            DubCard6.Enabled = true;
+            DubCard7.Enabled = true;
+            DubCard8.Enabled = true;
+            DubCard9.Enabled = true;
+            DubCard10.Enabled = true;
+            DubCard11.Enabled = true;
+            DubCard12.Enabled = true;
+        }
+
+        #endregion
+
         private void Opnieuw_Click(object sender, EventArgs e)
         {
+            CardEnable();
             Level1_Load(sender, e);
+
         }
     }
 }

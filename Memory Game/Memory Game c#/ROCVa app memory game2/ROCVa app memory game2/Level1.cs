@@ -19,8 +19,8 @@ namespace ROCVa_app_memory_game2
         //List<int> X = new List<int>();
         //List<int> Y = new List<int>();
         List<Point> points = new List<Point>(); // Lijst voor de kaarten
-        bool again = false; // speel nog een keer?
-        int Level = 1;
+        //bool again = false; // speel nog een keer?
+        int Level = 5;
         PictureBox PendingImage1; //Slaat eerste geflipte kaart op
         PictureBox PendingImage2; //Slaat tweede geflipte kaart op
 
@@ -47,7 +47,8 @@ namespace ROCVa_app_memory_game2
                 picture.Location = p;  //Geeft plaatje de locatie van Next Random
                 points.Remove(p); //Zelfde locatie wordt niet meer gebruikt
             }
-            label2.Text = "2";
+            int timer4 = 120 - Level * 20;
+            label2.Text = Convert.ToString(timer4);
             timer1.Start();
             timer2.Start();
             #region afbeeldingen
@@ -79,7 +80,7 @@ namespace ROCVa_app_memory_game2
             
             
         }
-
+        #region Level Timer
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -99,23 +100,36 @@ namespace ROCVa_app_memory_game2
             if(timer == 0)
             {
                 timer2.Stop();
-                timer4.Start();
+                if (MessageBox.Show("De tijd is om! wilt u het opnieuw proberen?", "Tijd is om!", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button1) == DialogResult.No)
+                {
+                    Start_Menu form = new Start_Menu();
+                    form.Show();
+                    this.Hide();
+                    //Application.Exit(); // or this.Close();
+                }
+                else
+                {
+                    Level1 form = new Level1();
+                    form.Show();
+                    this.Hide();
+                    // timer4.Start();
+                }
             }
         }
-        #region Level Timer
+
 
         private void timer4_Tick(object sender, EventArgs e)
         {
-            int timer = 100;
+            //int timer = 100;
             //int timer4 = 120 - Level * 20;
 
-            timer = timer-1;
+           // timer = timer-1;
 
-            label2.Text = Convert.ToString(timer);
-            if (timer == 0)
-            {
+            //label2.Text = Convert.ToString(timer);
+            //if (timer == 0)
+            //{
                 
-            }
+            //}
         }
         #endregion
        

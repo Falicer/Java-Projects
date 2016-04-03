@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace ROCVa_app_memory_game2
 {
 
-    public partial class Level3 : Form
+    public partial class Level2 : Form
     {
         //variables
         Random Location = new Random();
@@ -27,7 +27,7 @@ namespace ROCVa_app_memory_game2
         List<int> IDS = new List<int>();
         List<PictureBox> pictureboxes = new List<PictureBox>();
         
-        public Level3()
+        public Level2()
         {
             
             InitializeComponent();

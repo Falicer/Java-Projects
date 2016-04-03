@@ -1,6 +1,6 @@
 ﻿namespace ROCVa_app_memory_game2
 {
-    public partial class Level3
+    public partial class Level2
     {
         /// <summary>
         /// Required designer variable.

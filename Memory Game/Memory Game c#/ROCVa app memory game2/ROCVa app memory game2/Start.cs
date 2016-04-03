@@ -35,5 +35,10 @@ namespace ROCVa_app_memory_game2
             //this.Close();
 
         }
+
+        private void Close_button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace ROCVa_app_memory_game2
 {
 
-    public partial class Level2 : Form
+    public partial class Level4 : Form
     {
         //variables
         Random Location = new Random();
@@ -19,21 +19,21 @@ namespace ROCVa_app_memory_game2
         //List<int> X = new List<int>();
         //List<int> Y = new List<int>();
         List<Point> points = new List<Point>(); // Lijst voor de kaarten
-        bool again = false; // speel nog een keer?
-        int Level = 2;
+        //bool again = false; // speel nog een keer?
+        int Level = 4;
         PictureBox PendingImage1; //Slaat eerste geflipte kaart op
         PictureBox PendingImage2; //Slaat tweede geflipte kaart op
 
-        List<int> IDS = new List<int>();
-        List<PictureBox> pictureboxes = new List<PictureBox>();
+        //List<int> IDS = new List<int>();
+        //List<PictureBox> pictureboxes = new List<PictureBox>();
         
-        public Level2()
+        public Level4()
         {
             
             InitializeComponent();
         }
 
-        private void Level2_Load(object sender, EventArgs e)
+        private void Level4_Load(object sender, EventArgs e)
         {
             foreach (PictureBox picture in cardsHolder.Controls)
             {
@@ -48,10 +48,10 @@ namespace ROCVa_app_memory_game2
                 points.Remove(p); //Zelfde locatie wordt niet meer gebruikt
             }
 
-            int timer4 = 120 - Level * 20;
-            label2.Text = Convert.ToString(timer4);
             timer1.Start();
             timer2.Start();
+            int timer4 = 120 - Level * 20;
+            label2.Text = Convert.ToString(timer4);
             #region afbeeldingen
             Card1.Image = Properties.Resources.Kaart1;
             DubCard1.Image = Properties.Resources.Kaart1;
@@ -96,9 +96,9 @@ namespace ROCVa_app_memory_game2
         private void timer2_Tick(object sender, EventArgs e)
         {
             int timer = Convert.ToInt32(label2.Text);
-            timer = timer - 1;
+            timer = timer-1;
             label2.Text = Convert.ToString(timer);
-            if (timer == 0)
+            if(timer == 0)
             {
                 timer2.Stop();
                 if (MessageBox.Show("De tijd is om! wilt u het opnieuw proberen?", "Tijd is om!", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button1) == DialogResult.No)
@@ -110,7 +110,7 @@ namespace ROCVa_app_memory_game2
                 }
                 else
                 {
-                    Level2 form = new Level2();
+                    Level4 form = new Level4();
                     form.Show();
                     this.Hide();
                     // timer4.Start();
@@ -124,12 +124,12 @@ namespace ROCVa_app_memory_game2
             //int timer = 100;
             //int timer4 = 120 - Level * 20;
 
-            // timer = timer-1;
+           // timer = timer-1;
 
             //label2.Text = Convert.ToString(timer);
             //if (timer == 0)
             //{
-
+                
             //}
         }
         #endregion
@@ -155,6 +155,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card1.Enabled = false;
                     DubCard1.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -182,6 +183,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card1.Enabled = false;
                     DubCard1.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -209,6 +211,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card2.Enabled = false;
                     DubCard2.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -236,6 +239,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card2.Enabled = false;
                     DubCard2.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -263,6 +267,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card3.Enabled = false;
                     DubCard3.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -290,6 +295,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card3.Enabled = false;
                     DubCard3.Enabled = false;
+                    LevelUpCheck();
 
                 }
                 else
@@ -318,6 +324,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card4.Enabled = false;
                     DubCard4.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -345,6 +352,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card4.Enabled = false;
                     DubCard4.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -372,6 +380,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card5.Enabled = false;
                     DubCard5.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -399,6 +408,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card5.Enabled = false;
                     DubCard5.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -426,6 +436,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card6.Enabled = false;
                     DubCard6.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -453,6 +464,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card6.Enabled = false;
                     DubCard6.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -480,6 +492,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card7.Enabled = false;
                     DubCard7.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -507,6 +520,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card7.Enabled = false;
                     DubCard7.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -534,6 +548,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card8.Enabled = false;
                     DubCard8.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -561,6 +576,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card8.Enabled = false;
                     DubCard8.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -588,6 +604,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card9.Enabled = false;
                     DubCard9.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -615,6 +632,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card9.Enabled = false;
                     DubCard9.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -642,6 +660,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card10.Enabled = false;
                     DubCard10.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -669,6 +688,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card10.Enabled = false;
                     DubCard10.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -696,6 +716,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card11.Enabled = false;
                     DubCard11.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -723,6 +744,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card11.Enabled = false;
                     DubCard11.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -750,6 +772,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card12.Enabled = false;
                     DubCard12.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -777,6 +800,7 @@ namespace ROCVa_app_memory_game2
                     PendingImage2 = null;
                     Card12.Enabled = false;
                     DubCard12.Enabled = false;
+                    LevelUpCheck();
                 }
                 else
                 {
@@ -830,11 +854,11 @@ namespace ROCVa_app_memory_game2
         #endregion
 
         #region Opnieuw Knop
-
+ 
         private void Opnieuw_Click(object sender, EventArgs e)
         {
             CardEnable();
-            Level2_Load(sender, e);
+            Level4_Load(sender, e);
 
         }
         #endregion
@@ -858,7 +882,7 @@ namespace ROCVa_app_memory_game2
             {
                 timer2.Stop();
                 System.Windows.Forms.MessageBox.Show("Goed Gedaan het level is voltooid, je gaat nu naar het volgende level!");
-                Level3 form = new Level3();
+                Level5 form = new Level5();
                 form.Show();
                 this.Hide();
             }

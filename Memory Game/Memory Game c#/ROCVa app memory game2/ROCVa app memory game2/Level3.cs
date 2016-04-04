@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace ROCVa_app_memory_game2
 {
 
-    public partial class Level2 : Form
+    public partial class Level3 : Form
     {
         //variables
         Random Location = new Random();
@@ -20,20 +20,20 @@ namespace ROCVa_app_memory_game2
         //List<int> Y = new List<int>();
         List<Point> points = new List<Point>(); // Lijst voor de kaarten
         bool again = false; // speel nog een keer?
-        int Level = 2;
+        int Level = 3;
         PictureBox PendingImage1; //Slaat eerste geflipte kaart op
         PictureBox PendingImage2; //Slaat tweede geflipte kaart op
 
         List<int> IDS = new List<int>();
         List<PictureBox> pictureboxes = new List<PictureBox>();
         
-        public Level2()
+        public Level3()
         {
             
             InitializeComponent();
         }
 
-        private void Level2_Load(object sender, EventArgs e)
+        private void Level3_Load(object sender, EventArgs e)
         {
             foreach (PictureBox picture in cardsHolder.Controls)
             {
@@ -110,7 +110,7 @@ namespace ROCVa_app_memory_game2
                 }
                 else
                 {
-                    Level2 form = new Level2();
+                    Level3 form = new Level3();
                     form.Show();
                     this.Hide();
                     // timer4.Start();
@@ -834,7 +834,7 @@ namespace ROCVa_app_memory_game2
         private void Opnieuw_Click(object sender, EventArgs e)
         {
             CardEnable();
-            Level2_Load(sender, e);
+            Level3_Load(sender, e);
 
         }
         #endregion

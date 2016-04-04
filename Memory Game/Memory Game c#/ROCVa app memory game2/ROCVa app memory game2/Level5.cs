@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace ROCVa_app_memory_game2
 {
@@ -32,7 +33,7 @@ namespace ROCVa_app_memory_game2
             
             InitializeComponent();
         }
-
+        SoundPlayer levelUp = new SoundPlayer(@"C:\musicC\levelup.wav");
         private void Level5_Load(object sender, EventArgs e)
         {
             foreach (PictureBox picture in cardsHolder.Controls)
@@ -881,8 +882,9 @@ namespace ROCVa_app_memory_game2
                 Card12.Enabled == false && DubCard12.Enabled == false)
             {
                 timer2.Stop();
-                System.Windows.Forms.MessageBox.Show("Goed Gedaan het level is voltooid, je hebt het einde van de level bereikt");
-                Level5 form = new Level5();
+                levelUp.Play();
+                System.Windows.Forms.MessageBox.Show("Goed Gedaan het level is voltooid, je hebt het einde van de spel bereikt");
+                Start_Menu form = new Start_Menu();
                 form.Show();
                 this.Hide();
             }
